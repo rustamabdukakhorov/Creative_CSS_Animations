@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02: Creative Swipe Button Effect</title>
+</head>
+<body>
+    <style>
+        body
+        {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+        }
+        a
+        {
+            text-decoration: none;
+            color: #272727;
+            font-family: sans-serif;
+            font-size: 40px;
+            border: 3px solid #272727;
+            padding: 40px 80px;
+            position: relative;
+            overflow: hidden;
+            transition: all 1s;
+        }
+        a::before
+        {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #272727;
+            z-index: -1;
+            transform: translateX(-100%);
+            transition: all 1s;
+        }
+        a:hover::before
+        {
+            transform: translateX(0);
+            transition: all 1s;
+        }
+        a:hover
+        {
+            color: #fff;
+        }
+    </style>
+
+    <a href="#">Hover Me</a>
+
+</body>
+</html>
