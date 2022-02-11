@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07: Creative Two Layer Swapping Button Effect</title>
+</head>
+<body>
+    
+    <style>
+        body
+        {
+            height: 100vh;
+            background-color: #789;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a
+        {
+            text-decoration: none;
+            color: transparent;
+            font-size: 45px;
+            font-family: sans-serif;
+            border: 5px solid #262626;
+            padding: 40px 80px;
+            background-color: #262626;
+            position: relative;
+            overflow: hidden;
+        }
+        a::before
+        {
+            content: 'Start';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #262626;
+            background-color: #ebe37f;
+            transition: all 0.8s;
+            transform: translate(-100%, 100%);
+        }
+        a::after
+        {
+            content: 'Hover Me';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #262626;
+            background-color: #ebe37f;
+            transition: all 0.8s;
+        }
+        a:hover::after
+        {
+            transform: translate(100%, -100%);
+        }
+        a:hover::before
+        {
+            transform: translate(0, 0);
+        }
+    </style>
+
+    <a href="#"> Hover Me </a>
+
+</body>
+</html>
