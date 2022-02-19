@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>16: Creative Border Glowing Button Effect</title>
+</head>
+<body>
+
+
+	<style>
+		body
+		{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		button
+		{
+			text-transform: uppercase;
+			font-size: 30px;
+			font-family: sans-serif;
+			padding: 20px 45px;
+			border: 3px solid #fff;
+			box-sizing: border-box;
+			background-color: #AA7700;
+			cursor: pointer;
+			position: relative;
+		}
+		button::before
+		{
+			content: "";
+			position: absolute;
+			top: -5px;
+			left: -5px;
+			width: 30px;
+			height: 30px;
+			/*background-color: red;*/
+			border-top: 3px solid #AA7700;
+			border-left: 3px solid #AA7700;
+			transition: all 0.3s;
+		}
+		button:hover::before
+		{
+			width: 100%;
+			height: 100%;
+		}
+		button::after
+		{
+			content: "";
+			position: absolute;
+			bottom: -5px;
+			right: -5px;
+			width: 30px;
+			height: 30px;
+			/*background-color: red;*/
+			border-bottom: 3px solid #AA7700;
+			border-right: 3px solid #AA7700;
+			transition: all 0.3s;
+		}
+		button:hover::after
+		{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+
+	<button>Button</button>
+
+</body>
+</html>
